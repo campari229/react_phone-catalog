@@ -4,7 +4,7 @@
   display: flex;
   justify-content: space-between;
 
-  padding: 25px;
+  // padding: 20px;
   border-bottom: 1px solid #e2e6e9;
 
   &__nav-wrapper {
@@ -18,7 +18,7 @@
   }
 
   &__logo {
-    margin-right: 60px;
+    margin: 0 60px 0 24px;
     @extend %uppercase;
   }
 
@@ -29,6 +29,7 @@
     display: block;
     height: 50px;
     width: 50px;
+    border: 1px solid #e2e6e9;
   }
 
   &__card {
@@ -38,6 +39,7 @@
     display: block;
     height: 50px;
     width: 50px;
+    border: 1px solid #e2e6e9;
   }
 }
 

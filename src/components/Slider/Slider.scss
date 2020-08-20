@@ -1,0 +1,24 @@
+.slider {
+  display: flex;
+  width: 80vw;
+  height: 60vh;
+  margin: 0 auto;
+
+  &__images {
+    overflow: hidden;
+    display: flex;
+  }
+
+  &__item {
+    max-width: 100%;
+    min-width: 100%;
+
+    transition: transform 0.5s;
+  }
+
+  &__image {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}
