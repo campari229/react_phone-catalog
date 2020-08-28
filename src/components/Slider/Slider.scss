@@ -1,7 +1,6 @@
 .slider {
-  width: 80vw;
-  height: 50vh;
-  margin: 0 auto;
+  height: 60vh;
+  margin: 40px  200px;
 
   &__wrapper {
     display: flex;
@@ -11,6 +10,11 @@
   &__images {
     overflow: hidden;
     display: flex;
+  }
+
+  &__btn {
+    border: 1px solid #b4bdc4;
+    background-color: #fff;
   }
 
   &__item {
@@ -40,6 +44,7 @@
     background-color: grey;
     border: none;
     cursor: pointer;
+    outline: none;
   }
 
   &__button--active {
