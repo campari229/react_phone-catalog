@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 import { getProducts } from '../../store/store';
 
 import { Product } from '../../Interfaces';
+import { ProductCard } from '../ProductCard/ProductCard';
 
 export const HotPrices: React.FC = () => {
   const products: Product[] = useSelector(getProducts);
@@ -11,7 +12,7 @@ export const HotPrices: React.FC = () => {
     <ul>
       {products.map(product => (
         <li>
-          {product.name}
+          <ProductCard product={product} />
         </li>
       ))}
     </ul>
