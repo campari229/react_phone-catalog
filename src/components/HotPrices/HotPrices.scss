@@ -1,0 +1,19 @@
+.hot-prices {
+  &__list {
+    display: flex;
+    list-style: none;
+  }
+}
+
+.product-list {
+  display: flex;
+  list-style: none;
+
+  &__item {
+    margin-right: 16px;
+  }
+
+  &__item:last-child {
+    margin-right: 0;
+  }
+}

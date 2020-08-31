@@ -1,0 +1,45 @@
+@import "../Header/typography.scss";
+
+.card {
+  padding: 32px;
+  border: 1px solid #e2e6e9;
+
+  &__img {
+    height: 208px;
+    width: 208px;
+  }
+
+  &__name {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 150%;
+
+    color: #313237;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__button-cart {
+    width: 176px;
+    height: 40px;
+
+    margin-right: 8px;
+
+    background-color: #313237;
+    color: #fff;
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 150%;
+
+    border: none;
+  }
+
+  &__button-favorites {
+    width: 40px;
+    height: 40px;
+  }
+}
