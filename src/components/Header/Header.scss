@@ -23,20 +23,24 @@
   }
 
   &__favorites {
-    background-image: url(../../images/heart.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    display: block;
+    // background-image: url(../../images/heart.png);
+    // background-position: center;
+    // background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 50px;
     width: 50px;
     border: 1px solid #e2e6e9;
   }
 
   &__card {
-    background-image: url(../../images/basket.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    display: block;
+    // background-image: url(../../images/basket.png);
+    // background-position: center;
+    // background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 50px;
     width: 50px;
     border: 1px solid #e2e6e9;

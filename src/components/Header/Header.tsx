@@ -53,8 +53,12 @@ export const Header: React.FC = () => {
         </nav>
       </div>
       <div className="header__buttons-wrapper">
-        <NavLink to="/favotites" className="header__favorites" />
-        <NavLink to="/card" className="header__card" />
+        <NavLink to="/favotites" className="header__favorites">
+          <img src="img/images/favorite.svg" alt="favorite" />
+        </NavLink>
+        <NavLink to="/card" className="header__card">
+          <img src="img/images/basket.png" alt="basket" />
+        </NavLink>
       </div>
     </div>
   );
