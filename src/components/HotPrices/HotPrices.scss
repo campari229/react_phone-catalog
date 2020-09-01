@@ -1,16 +1,43 @@
+@import "../Header/typography.scss";
+
 .hot-prices {
-  &__list {
+  width: 100%;
+  overflow: hidden;
+
+  &__header {
     display: flex;
-    list-style: none;
+    justify-content: space-between;
+    margin: 0 15px 28px;
+  }
+
+  &__title {
+    @extend %h1;
+    color: #313237;
+  }
+
+  &__buttons {
+    display: flex;
+    width: 80px;
+    justify-content: space-between;
+  }
+
+  &__btn {
+    width: 32px;
+    height: 32px;
+
+    background-color: #fff;
+    border: 1px solid #b4bdc4;
   }
 }
 
 .product-list {
   display: flex;
   list-style: none;
+  // flex-wrap: wrap;
+  justify-content: space-between;
 
   &__item {
-    margin-right: 16px;
+    transition: transform 0.5s;
   }
 
   &__item:last-child {

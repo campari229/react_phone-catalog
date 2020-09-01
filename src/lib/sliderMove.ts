@@ -2,19 +2,19 @@ export function sliderMove(
   direction: string,
   itemWidth: number | undefined,
   curentTranslate: number,
-  numberOfSlides: number,
+  maxTranslate: number,
 ) {
   let translate = curentTranslate;
 
   switch (direction) {
     case 'right':
-      if (itemWidth && translate > -(itemWidth * (numberOfSlides - 1))) {
+      if (itemWidth && curentTranslate > -maxTranslate) {
         translate -= itemWidth;
       }
 
       break;
     case 'left':
-      if (itemWidth && translate < 0) {
+      if (itemWidth && translate <= -itemWidth) {
         translate += itemWidth;
       }
 

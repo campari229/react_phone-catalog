@@ -12,7 +12,9 @@ export const Slider: React.FC = () => {
     const width = slider?.offsetWidth;
 
     if (width) {
-      setTranslate(sliderMove(direction, width, translate, 3));
+      const maxTranslate = width * 2;
+
+      setTranslate(sliderMove(direction, width, translate, maxTranslate));
     }
 
     if (direction === 'left' && activeSlide > 0) {
@@ -38,7 +40,14 @@ export const Slider: React.FC = () => {
     <>
       <div className="slider">
         <div className="slider__wrapper">
-          <button className="slider__btn" type="button" onClick={() => move('left')}>{'<'}</button>
+          <button
+            className="slider__btn"
+            type="button"
+            onClick={() => move('left')}
+            disabled={activeSlide === 0}
+          >
+            {'<'}
+          </button>
           <ul id="slider" className="slider__images">
             <li
               className="slider__item"
@@ -71,7 +80,14 @@ export const Slider: React.FC = () => {
               />
             </li>
           </ul>
-          <button className="slider__btn" type="button" onClick={() => move('right')}>{'>'}</button>
+          <button
+            className="slider__btn"
+            type="button"
+            onClick={() => move('right')}
+            disabled={activeSlide === 2}
+          >
+            {'>'}
+          </button>
         </div>
         <div className="slider__buttons">
           <button

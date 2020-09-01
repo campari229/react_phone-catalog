@@ -3,18 +3,69 @@
 .card {
   padding: 32px;
   border: 1px solid #e2e6e9;
+  box-sizing: border-box;
+  width: 272px;
 
   &__img {
     height: 208px;
     width: 208px;
+
+    margin-bottom: 24px;
   }
 
   &__name {
+    height: 42px;
+
     font-weight: 500;
     font-size: 14px;
     line-height: 150%;
-
     color: #313237;
+
+    margin-bottom: 8px;
+  }
+
+  &__price {
+    // font-family: Mont;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 140%;
+
+    display: flex;
+
+    margin-bottom: 7px;
+
+    &-main {
+      color: #313237;
+      margin-right: 8px;
+    }
+
+    &-full {
+      color: #89939a;
+      text-decoration: line-through;
+    }
+  }
+
+  &__about {
+    padding: 16px 0;
+    border-top: 1px solid #e2e6e9;
+
+    &-text {
+      display: flex;
+      justify-content: space-between;
+
+      margin-bottom: 8px;
+
+      &-characteristic {
+        @extend %smallText;
+        color: #89939a;
+      }
+
+      &-value {
+        @extend %smallText;
+        color: #313237;
+      }
+    }
   }
 
   &__buttons {
