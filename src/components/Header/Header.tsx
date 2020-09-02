@@ -31,7 +31,7 @@ export const Header: React.FC = () => {
             </li>
             <li className="navigation__item">
               <NavLink
-                to="tablets"
+                to="/tablets"
               >
                 tablets
               </NavLink>

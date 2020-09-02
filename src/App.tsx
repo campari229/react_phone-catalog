@@ -3,7 +3,8 @@ import { useDispatch } from 'react-redux';
 
 import { Header } from './components/Header/Header';
 import { Slider } from './components/Slider/Slider';
-import { HotPrices } from './components/HotPrices/HotPrices';
+import { ProductsList } from './components/ProductsList/ProductsList';
+import { Categoryes } from './components/Categoryes/Categoryes';
 
 import { loadData } from './lib/api';
 
@@ -21,7 +22,9 @@ const App = () => {
       <Header />
       <div className="container">
         <Slider />
-        <HotPrices />
+        <ProductsList title="Hot prices" sortType="price" />
+        <Categoryes />
+        <ProductsList title="Brand new models" sortType="new" />
       </div>
     </div>
   );

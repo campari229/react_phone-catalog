@@ -1,8 +1,10 @@
 @import "../Header/typography.scss";
 
-.hot-prices {
+.products-list {
   width: 100%;
   overflow: hidden;
+
+  margin-bottom: 80px;
 
   &__header {
     display: flex;
@@ -30,7 +32,7 @@
   }
 }
 
-.product-list {
+.list {
   display: flex;
   list-style: none;
   // flex-wrap: wrap;
