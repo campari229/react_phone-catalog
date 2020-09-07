@@ -10,7 +10,12 @@ export const productsSort = (sortType: string, products: Product[]): Product[] =
     case 'new':
       return [
         ...products
-          .sort((productA: Product, productB: Product) => productB.age - productA.age),
+          .sort((productA: Product, productB: Product) => productA.age - productB.age),
+      ];
+    case 'phones':
+      return [
+        ...products
+          .filter((product: Product) => product.type === 'phone'),
       ];
     default:
       return products;

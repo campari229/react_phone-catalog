@@ -1,10 +1,15 @@
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 
+import { Switch, Route } from 'react-router-dom';
+
 import { Header } from './components/Header/Header';
-import { Slider } from './components/Slider/Slider';
-import { ProductsList } from './components/ProductsList/ProductsList';
-import { Categoryes } from './components/Categoryes/Categoryes';
+// import { Slider } from './components/Slider/Slider';
+// import { ProductsList } from './components/ProductsList/ProductsList';
+// import { Categoryes } from './components/Categoryes/Categoryes';
+
+import { ProductsScreen } from './components/ProductsScreen/ProductsScreen';
+import { Home } from './components/Home/Home';
 
 import { loadData } from './lib/api';
 
@@ -20,12 +25,12 @@ const App = () => {
   return (
     <div className="App">
       <Header />
-      <div className="container">
-        <Slider />
-        <ProductsList title="Hot prices" sortType="price" />
-        <Categoryes />
-        <ProductsList title="Brand new models" sortType="new" />
-      </div>
+      <Switch>
+        <Route path="/" exact component={Home} />
+        <Route path="/phones" render={({ match }) => <ProductsScreen match={match} />} />
+        <Route path="/tablets" />
+        <Route path="/accsesories" />
+      </Switch>
     </div>
   );
 };

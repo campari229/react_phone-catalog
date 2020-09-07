@@ -61,7 +61,7 @@ export const ProductsList: React.FC<Props> = ({ title, sortType }) => {
       <ul className="products-list__list list" id="product-list">
         {products.map(product => (
           <li
-            className="ist__item"
+            className="list__item"
             style={{
               margin: `0 ${margin / 2}px`,
               transform: `translateX(${translate}px)`,

@@ -1,9 +1,12 @@
 import React from 'react';
 import {
-  Switch,
+  // Switch,
   NavLink,
-  Route,
+  // Route,
 } from 'react-router-dom';
+
+// import { ProductsScreen } from '../ProductsScreen/ProductsScreen';
+// import { Home } from '../Home/Home';
 
 import './Header.scss';
 
@@ -44,12 +47,6 @@ export const Header: React.FC = () => {
               </NavLink>
             </li>
           </ul>
-          <Switch>
-            <Route path="/" />
-            <Route path="/phones" />
-            <Route path="/tablets" />
-            <Route path="/accsesories" />
-          </Switch>
         </nav>
       </div>
       <div className="header__buttons-wrapper">
