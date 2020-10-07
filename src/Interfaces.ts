@@ -12,3 +12,10 @@ export interface Product {
   ram: string;
   newPrice?: number;
 }
+
+export interface Match {
+  isExact: boolean;
+  path: string;
+  url: string;
+  params: object;
+}

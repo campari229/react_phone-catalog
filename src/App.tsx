@@ -28,8 +28,8 @@ const App = () => {
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/phones" render={({ match }) => <ProductsScreen match={match} />} />
-        <Route path="/tablets" />
-        <Route path="/accsesories" />
+        <Route path="/tablets" render={({ match }) => <ProductsScreen match={match} />} />
+        <Route path="/accsesories" render={({ match }) => <ProductsScreen match={match} />} />
       </Switch>
     </div>
   );

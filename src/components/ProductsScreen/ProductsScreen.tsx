@@ -3,21 +3,21 @@ import { useSelector } from 'react-redux';
 
 import { productsSort } from '../../lib/productsSort';
 import { getProducts } from '../../store/store';
+import { Match } from '../../Interfaces';
+
+// import { ProductCard } from '../ProductCard/ProductCard';
 
 type Props = {
-  match: any;
+  match: Match;
 };
 
 export const ProductsScreen: React.FC<Props> = ({ match }) => {
-  const phones = productsSort('phones', useSelector(getProducts));
-  console.log(match);
+  const products = productsSort(match.path, useSelector(getProducts));
 
   return (
     <ul>
-      {phones.map(phone => (
-        <li>
-          {phone.type}
-        </li>
+      {products.map((product) => (
+        <li>{product.name}</li>
       ))}
     </ul>
   );
