@@ -1,0 +1,32 @@
+.product-screen {
+  width: 80vw;
+  margin: 0 auto;
+
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 40px;
+  }
+}
+
+.products-navigation {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+
+  &__btn {
+    width: 32px;
+    height: 32px;
+    border: 1px solid #e2e6e9;
+    background-color: #fff;
+    cursor: pointer;
+    outline: none;
+  }
+
+  &__btn--active {
+    background-color: #313237;
+    color: #fff;
+    border: none;
+  }
+}
