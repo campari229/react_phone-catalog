@@ -7,10 +7,17 @@ export const productsSort = (sortType: string, products: Product[]): Product[] =
         ...products
           .sort((productA: Product, productB: Product) => productB.discount - productA.discount),
       ];
-    case 'new':
+    case 'newest':
       return [
         ...products
           .sort((productA: Product, productB: Product) => productA.age - productB.age),
+      ];
+    case 'name':
+      return [
+        ...products
+          .sort((productA: Product, productB: Product) => {
+            return productA.name.localeCompare(productB.name);
+          }),
       ];
     case '/phones':
       return [

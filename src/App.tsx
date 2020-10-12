@@ -27,9 +27,9 @@ const App = () => {
       <Header />
       <Switch>
         <Route path="/" exact component={Home} />
-        <Route path="/phones" render={({ match }) => <ProductsScreen match={match} />} />
-        <Route path="/tablets" render={({ match }) => <ProductsScreen match={match} />} />
-        <Route path="/accsesories" render={({ match }) => <ProductsScreen match={match} />} />
+        <Route path="/phones" render={(props) => <ProductsScreen {...props} title="Mobile phones" />} />
+        <Route path="/tablets" render={(props) => <ProductsScreen {...props} title="Tablets" />} />
+        <Route path="/accsesories" render={(props) => <ProductsScreen {...props} title="Accsesories" />} />
       </Switch>
     </div>
   );

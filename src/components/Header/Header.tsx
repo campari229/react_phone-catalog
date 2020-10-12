@@ -5,9 +5,6 @@ import {
   // Route,
 } from 'react-router-dom';
 
-// import { ProductsScreen } from '../ProductsScreen/ProductsScreen';
-// import { Home } from '../Home/Home';
-
 import './Header.scss';
 
 export const Header: React.FC = () => {
